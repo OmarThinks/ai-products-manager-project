@@ -4,7 +4,7 @@ import { Repository } from 'typeorm';
 import { ProductsEntity } from './products.entity';
 
 @Injectable()
-export class UsersService {
+class ProductsService {
   constructor(
     @InjectRepository(ProductsEntity)
     private productsRepository: Repository<ProductsEntity>,
@@ -22,3 +22,5 @@ export class UsersService {
     await this.productsRepository.delete(id);
   }
 }
+
+export { ProductsService };
